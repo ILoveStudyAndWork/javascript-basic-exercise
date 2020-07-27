@@ -13,4 +13,34 @@ export default class Vector {
   // class.
 
   // PLEASE DELETE THIS LINE AND ADD YOUR IMPLEMENTATION HERE
+
+  constructor(a, b) {
+    const x = a;
+    const y = b;
+  }
+  set x(X) {
+    throw new Error();
+  }
+  set y(Y) {
+    throw new Error();
+  }
+  get x() {
+    return x;
+  }
+  get y() {
+    return y;
+  }
+  static plus(a, b) {
+    let plusResult = new Vector(a.x + b.x, a.y + b.y);
+    return plusResult;
+  }
+
+  static minus(a, b) {
+    let minusResult = new Vector(a.x - b.x, a.y - b.y);
+    return minusResult;
+  }
+
+  distance() {
+    return Math.sqrt(this.x * this.x + this.y * this.y );
+  }
 }
